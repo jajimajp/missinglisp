@@ -1,7 +1,7 @@
 # MissingLisp
 ## Overview
 
-MissingLisp is a minimalist Lisp interpreter embedded in Ruby. It allows you to write and evaluate Lisp expressions with Ruby's varible names.
+MissingLisp is a minimalist Lisp interpreter embedded in Ruby. It allows you to write and evaluate Lisp expressions with Ruby's variable names.
 
 ## Installation
 
