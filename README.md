@@ -35,7 +35,7 @@ MissingLisp implements a subset of Lisp.
 
 - Uses `L` instead of `(` to open expressions
 - Uses `J` instead of `)` to close expressions
-  - Note: `Lfoo_barJ` is tokenized as `L`, `foo_barJ`. If you want to use `J` as closing parentheses, you must use `_` to separate the token: `Lfoo_bar_J`
+  - Note: `Lfoo_barJ` is tokenized as `L`, `foo` `barJ`. If you want to use `J` as closing parentheses, you must use `_` to separate the token: `Lfoo_bar_J`
 - Symbols are written as normal identifiers (e.g., `add`, `define`, `lambda`)
 - Numbers are written as normal numbers
 - Whitespace is ignored. Uses `_` instead of spaces
