@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require 'missinglisp'
+
+Ldefine_fib_Llambda_Ln_J_Lif_Lleq_n_2J_1_Ladd_Lfib_Lsub_n_2JJLfib_Lsub_n_1JJJJJJ
+
+# The 10th fibonacci number
+p Lfib_10J
+

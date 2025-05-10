@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'missinglisp'
+
+Ldefine_fact_Llambda_Ln_J_Lif_Lleq_n_0J_1_Lmult_n_Lfact_Lsub_n_1JJJJJJ
+
+# !5
+p Lfact_5J
