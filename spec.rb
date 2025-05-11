@@ -60,4 +60,9 @@ assert 'c', 'Laref_QabcdeQ_2J'
 assert 'c', 'Laref_QabcdeQ_2J'
 assert 'hello world', 'Lconcatenate_nil_QhelloQ_Q_Q_QworldQJ'
 
+# char
+assert 'A', 'LcodeChar_65J'
+assert '!', 'LcodeChar_33J'
+
+
 puts "Test finished successfully"
