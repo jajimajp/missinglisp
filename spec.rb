@@ -57,6 +57,8 @@ assert 120, 'Ldefine_fact_Llambda_Ln_JLif_Lleq_n_0J1Lmult_n_Lfact_Lsub_n_1JJJJJJ
 assert 4, 'Llength_QabcdQJ'
 assert 4, 'Llength_Llist_1_2_3_4JJ'
 
+assert 3, 'Lprogn_Ldefine_a_1JLdefine_b_2JLadd_a_b_JJ'
+
 # strings
 assert ['foo'], 'Llist_QfooQJ'
 assert 'c', 'Laref_QabcdeQ_2J'

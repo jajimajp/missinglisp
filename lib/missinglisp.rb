@@ -31,6 +31,7 @@ class Lisp
       p: ->(*ls) { p ls },
       print: ->(*ls) { p ls },
       writeLine: ->(s, *) { puts s },
+      princ: ->(s, *) { print s; $stdout.flush },
 
       t: true,
       nil: []
@@ -63,6 +64,8 @@ class Lisp
     elsif exp[0] == :lambda
       _, params, e = exp
       return ->(*args) { self.eval(e, env.merge(Hash[params.zip(args)])) }
+    elsif exp[0] == :progn
+      return self.eval_stmts(exp[1..], env)
     end
 
     # function application
