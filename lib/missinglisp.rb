@@ -18,6 +18,7 @@ class Lisp
 
       p: ->(*ls) { p ls },
 
+      t: true,
       nil: []
     }
   end
