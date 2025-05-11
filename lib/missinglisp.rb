@@ -16,7 +16,11 @@ class Lisp
       gt: ->(a, b, *) { a > b },
       geq: ->(a, b, *) { a >= b },
 
+      readLine: ->(*) { $stdin.readline.chomp },
+
       p: ->(*ls) { p ls },
+      print: ->(*ls) { p ls },
+      writeLine: ->(s, *) { puts s },
 
       t: true,
       nil: []
@@ -64,7 +68,6 @@ class Lisp
 
     res = nil
     exp.each do |stmt|
-      # p stmt
       res = self.eval(stmt, env)
     end
 
