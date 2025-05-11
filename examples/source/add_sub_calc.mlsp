@@ -26,28 +26,51 @@ Ldefine_toNum_Llambda_Lc_J_Lsub_LcharCode_c_J_48JJJ
 
 # Lp_LtoNum_Q3QJJ # test
 
-LwriteLine_QInput_expressionQJ
-Ldefine_input_LreadLine_JJ
+# LwriteLine_QInput_expressionQJ
+# Lprinc_LcodeChar_62JJLprinc_Q_QJ
+# Ldefine_input_LreadLine_JJ
 
-Ldefine_len_Llength_input_JJ
+# Ldefine_len_Llength_input_JJ
 
-Ldefine_loop_Llambda_Li_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_Lif_LisPlus_Laref_input_i_JJ_Lloop_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisMinus_Laref_input_i_JJ_Lloop_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisDigit_Laref_input_i_JJ_Lloop_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_Lloop_Ladd_i_1J_cur_cursign_sum_JJJJJJJ
+# Ldefine_loop_Llambda_Li_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_Lif_LisPlus_Laref_input_i_JJ_Lloop_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisMinus_Laref_input_i_JJ_Lloop_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisDigit_Laref_input_i_JJ_Lloop_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_Lloop_Ladd_i_1J_cur_cursign_sum_JJJJJJJ
+
+Ldefine_loop_Llambda_Linput_len_i_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_Lif_LisPlus_Laref_input_i_JJ_Lloop_input_len_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisMinus_Laref_input_i_JJ_Lloop_input_len_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisDigit_Laref_input_i_JJ_Lloop_input_len_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_Lloop_input_len_Ladd_i_1J_cur_cursign_sum_JJJJJJJ
 
 # ↑ source:
 # 
-# Ldefine_loop_Llambda_Li_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_
+# Ldefine_loop_Llambda_Linput_len_i_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_
 #   Lif_LisPlus_Laref_input_i_JJ_
-#     Lloop_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_
+#     Lloop_input_len_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_
 #     Lif_LisMinus_Laref_input_i_JJ_
-#       Lloop_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_
+#       Lloop_input_len_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_
 #       Lif_LisDigit_Laref_input_i_JJ_
-#         Lloop_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_
-#         Lloop_Ladd_i_1J_cur_cursign_sum_J
+#         Lloop_input_len_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_
+#         Lloop_input_len_Ladd_i_1J_cur_cursign_sum_J
 #       J
 #     J
 #   J
 # JJJ
 
-Ldefine_sum_Lloop_0_0_1_0JJ
-LwriteLine_sum_J
 
+Ldefine_main_Llambda_LJLprogn_LwriteLine_QInput_expressionQJLprinc_LcodeChar_62JJLprinc_Q_QJLdefine_input_LreadLine_JJLdefine_len_Llength_input_JJLif_Leq_len_0JLwriteLine_QexitQJ_Lprogn_Ldefine_sum_Lloop_input_len_0_0_1_0JJLwriteLine_sum_JLmain_JJJJJJ
+
+Lmain_J
+
+# Ldefine_main_
+#   Llambda_LJ
+#     Lprogn_
+#       LwriteLine_QInput_expressionQJ
+#       Lprinc_LcodeChar_62JJLprinc_Q_QJ
+#       Ldefine_input_LreadLine_JJ
+#       Ldefine_len_Llength_input_JJ
+#       Lif_Leq_len_0J
+#         LwriteLine_QexitQJ_
+#         Lprogn_
+#           Ldefine_sum_Lloop_input_len_0_0_1_0JJ
+#           LwriteLine_sum_J
+#           Lmain_J
+#         J
+#       J
+#     J
+#   J
+# J

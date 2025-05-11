@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "missinglisp"
-  s.version  = "0.0.3"
+  s.version  = "0.0.4"
   s.summary  = "Lisp in Ruby variable names"
   s.description = "Lisp programming using Ruby variable names"
   s.authors  = ["Yajima Soichi"]
