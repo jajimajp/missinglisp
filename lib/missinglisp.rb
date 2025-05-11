@@ -34,8 +34,11 @@ class Lisp
     elsif exp[0] == :if
       _, test, e1, e2 = exp
       test = self.eval(test, env)
-      return self.eval(e1, env) if test.is_a?(Array) && !test.empty?
-      return self.eval(e1, env) unless test.is_a?(Array) || !test
+      truthy = if test.is_a?(Array) then !test.empty? else test end
+
+      if truthy
+        return self.eval(e1, env)
+      end
 
       return self.eval(e2, env)
     elsif exp[0] == :define
