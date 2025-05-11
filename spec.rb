@@ -16,6 +16,7 @@ assert 1, 'Lcar_Llist_1_2_3JJ'
 assert [2, 3], 'Lcdr_Llist_1_2_3JJ'
 assert [1, 2], 'Lcons_1_Llist_2JJ'
 assert [1, 2, 3], 'Llist_1_2_3J'
+assert [], 'Llist_J'
 
 assert 6, 'Ladd_1_2_3J'
 assert 1, 'Lsub_2_1J'
@@ -41,6 +42,12 @@ assert false, 'Lgt_1_1J'
 assert true, 'Lgeq_2_1J'
 assert true, 'Lgeq_1_1J'
 assert false, 'Lgeq_1_2J'
+
+
+assert [:a, :b, 1], 'Lquote_a_b_1J'
+assert [[:add, 1, 2], :b, 1], 'Lquote_Ladd_1_2J_b_1J'
+assert 1, 'Lif_t_1_2J'
+assert 2, 'Lif_nil_1_2J'
 
 
 puts "Test finished successfully"
