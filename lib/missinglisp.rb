@@ -55,12 +55,37 @@ class Lisp
       .call(*args)
   end
 
+  # Evaluates list of lisp values e.g. Ldefine_a_1JLp_a_J
+  def eval_stmts(exp, env)
+    if !exp.is_a?(Array)
+      STDERR.puts 'eval_stmts: not a list'
+      exit 1
+    end
+
+    res = nil
+    exp.each do |stmt|
+      # p stmt
+      res = self.eval(stmt, env)
+    end
+
+    res
+  end
+
   def parse(program)
     tokens = tokenize program
     _parse tokens
   end
 
   def _parse(tokens)
+    stmts = []
+    while !tokens.empty?
+      stmts << parse_stmt(tokens)
+    end
+
+    stmts
+  end
+
+  def parse_stmt(tokens)
     return if tokens.empty?
 
     token = tokens.shift
@@ -72,7 +97,7 @@ class Lisp
       while tokens.first != :J
         raise 'unexpected end of input' if tokens.empty?
 
-        list << _parse(tokens)
+        list << parse_stmt(tokens)
       end
       tokens.shift
 
@@ -159,7 +184,7 @@ module Kernel
   def eval_lisp(s)
     @l ||= Lisp.new
     @e ||= @l.initial_env
-    @l.eval(@l.parse(s), @e)
+    @l.eval_stmts(@l.parse(s), @e)
   end
 
   def method_missing(m, *args, &block)
