@@ -54,6 +54,9 @@ assert 3, 'Ldefine_a_1JLadd_a_2J'
 assert 2, 'Ldefine_succ_Llambda_Ln_JLadd_n_1JJJLsucc_1J'
 assert 120, 'Ldefine_fact_Llambda_Ln_JLif_Lleq_n_0J1Lmult_n_Lfact_Lsub_n_1JJJJJJLfact_5J'
 
+assert 4, 'Llength_QabcdQJ'
+assert 4, 'Llength_Llist_1_2_3_4JJ'
+
 # strings
 assert ['foo'], 'Llist_QfooQJ'
 assert 'c', 'Laref_QabcdeQ_2J'
@@ -63,6 +66,7 @@ assert 'hello world', 'Lconcatenate_nil_QhelloQ_Q_Q_QworldQJ'
 # char
 assert 'A', 'LcodeChar_65J'
 assert '!', 'LcodeChar_33J'
+assert 65, 'LcharCode_QAQJ'
 
 
 puts "Test finished successfully"

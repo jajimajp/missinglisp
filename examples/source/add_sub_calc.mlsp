@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+require './lib/missinglisp.rb'
+
+# Calcuator which only supports '+' and '-'
+
+# or / and
+Ldefine_or_Llambda_La_b_J_Lif_a_t_Lif_b_t_nil_JJJJ
+Ldefine_and_Llambda_La_b_J_Lif_a_Lif_b_t_nil_Jnil_JJJ
+
+# isDigit
+Ldefine_isDigit_Llambda_Lc_J_Land_Lleq_LcodeChar_48J_c_J_Lleq_c_LcodeChar_57JJJJJ
+
+# isPlus: returns t if [c] is '+'
+Ldefine_isPlus_Llambda_Lc_J_Leq_LcodeChar_43Jc_JJJ
+
+Ldefine_isMinus_Llambda_Lc_J_Leq_LcodeChar_45Jc_JJJ
+
+# Test code: print if input character is '+'
+# LwriteLine_Qwrite_a_characterQJ
+# Ldefine_input_LreadLine_JJ
+# Lif_LisPlus_input_J_LwriteLine_QplusQJ_LwriteLine_Qnot_plusQJJ
+
+
+# convert one-digit character into number
+Ldefine_toNum_Llambda_Lc_J_Lsub_LcharCode_c_J_48JJJ
+
+# Lp_LtoNum_Q3QJJ # test
+
+LwriteLine_QInput_expressionQJ
+Ldefine_input_LreadLine_JJ
+
+Ldefine_len_Llength_input_JJ
+
+Ldefine_loop_Llambda_Li_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_Lif_LisPlus_Laref_input_i_JJ_Lloop_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisMinus_Laref_input_i_JJ_Lloop_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_Lif_LisDigit_Laref_input_i_JJ_Lloop_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_Lloop_Ladd_i_1J_cur_cursign_sum_JJJJJJJ
+
+# ↑ source:
+# 
+# Ldefine_loop_Llambda_Li_cur_cursign_sum_JLif_Lleq_len_i_J_Ladd_Lmult_cursign_cur_J_sum_J_
+#   Lif_LisPlus_Laref_input_i_JJ_
+#     Lloop_Ladd_i_1J_0_1_Ladd_Lmult_cursign_cur_J_sum_JJ_
+#     Lif_LisMinus_Laref_input_i_JJ_
+#       Lloop_Ladd_i_1J_0_Lsub_0_1J_Ladd_Lmult_cursign_cur_J_sum_JJ_
+#       Lif_LisDigit_Laref_input_i_JJ_
+#         Lloop_Ladd_i_1J_Ladd_Lmult_10_cur_J_LtoNum_Laref_input_i_JJJ_cursign_sum_J_
+#         Lloop_Ladd_i_1J_cur_cursign_sum_J
+#       J
+#     J
+#   J
+# JJJ
+
+Ldefine_sum_Lloop_0_0_1_0JJ
+LwriteLine_sum_J
+

@@ -16,12 +16,15 @@ class Lisp
       gt: ->(a, b, *) { a > b },
       geq: ->(a, b, *) { a >= b },
 
+      length: ->(l, *) { l.length },
+
       # string
       aref: ->(s, at, *) { s[at] },
       concatenate: ->(_type, *ls) { ls.reduce(:+) },
 
       # char
       codeChar: ->(c, *) { c.chr },
+      charCode: ->(c, *) { c.ord },
 
       readLine: ->(*) { $stdin.readline.chomp },
 
