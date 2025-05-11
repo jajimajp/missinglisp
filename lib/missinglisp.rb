@@ -16,6 +16,9 @@ class Lisp
       gt: ->(a, b, *) { a > b },
       geq: ->(a, b, *) { a >= b },
 
+      aref: ->(s, at, *) { s[at] },
+      concatenate: ->(_type, *ls) { ls.reduce(:+) },
+
       readLine: ->(*) { $stdin.readline.chomp },
 
       p: ->(*ls) { p ls },
@@ -29,6 +32,7 @@ class Lisp
 
   def eval(exp, env)
     return exp if exp.is_a? Numeric
+    return exp if exp.is_a? String
     return env[exp] if exp.is_a? Symbol
 
     # list
@@ -116,9 +120,12 @@ class Lisp
     res = []
     cur = ''
     is_reading_digit = false
+    is_reading_string = false
     s.each_char do |c|
       case c
       when '_'
+        cur += ' ' and next if is_reading_string
+
         if cur != ''
           if is_reading_digit
             res.push cur.to_i
@@ -157,6 +164,25 @@ class Lisp
         end
 
         res.push :J
+      when 'Q'
+        if is_reading_string
+          res.push cur
+          cur = ''
+          is_reading_string = false
+          next
+        elsif is_reading_digit
+          res.push cur.to_i
+          cur = ''
+          is_reading_digit = false
+          is_reading_string = true
+          next
+        end
+
+        if cur != ''
+          cur += 'Q'
+        else
+          is_reading_string = true
+        end
       when '0'..'9'
         cur += c and next if cur != ''
 
