@@ -48,6 +48,7 @@ assert [:a, :b, 1], 'Lquote_a_b_1J'
 assert [[:add, 1, 2], :b, 1], 'Lquote_Ladd_1_2J_b_1J'
 assert 1, 'Lif_t_1_2J'
 assert 2, 'Lif_nil_1_2J'
+assert 3, 'LLlambda_Ln_JLadd_n_1JJ_2J'
 
 assert 3, 'Ldefine_a_1JLadd_a_2J'
 assert 2, 'Ldefine_succ_Llambda_Ln_JLadd_n_1JJJLsucc_1J'

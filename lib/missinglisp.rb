@@ -50,9 +50,9 @@ class Lisp
       return ->(*args) { self.eval(e, env.merge(Hash[params.zip(args)])) }
     end
 
-    args = exp[1..].map { |c| self.eval(c, env) }
-    env[exp.first]
-      .call(*args)
+    # function application
+    values = exp.map { |c| self.eval(c, env) }
+    values[0].call(*values[1..])
   end
 
   # Evaluates list of lisp values e.g. Ldefine_a_1JLp_a_J
